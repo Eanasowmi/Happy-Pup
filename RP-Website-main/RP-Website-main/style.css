@@ -84,6 +84,16 @@ a {
     transition: 0.3s;
 }
 
+.inline-link {
+    color: var(--primary-600);
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.inline-link:hover {
+    color: var(--primary-700);
+}
+
 ul {
     list-style: none;
 }

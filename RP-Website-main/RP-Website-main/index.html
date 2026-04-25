@@ -49,6 +49,9 @@
 
                 <!-- Actions -->
                 <div class="nav-actions">
+                    <button id="search-btn" class="search-trigger" aria-label="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
                     <a href="#contact" class="btn btn-primary btn-get-started">
                         <span>Get Started</span>
                         <i class="fas fa-chevron-right"></i>
@@ -468,6 +471,26 @@
         </section>
     </main>
 
+    <!-- Search Modal -->
+    <div id="search-modal" class="search-modal">
+        <div class="search-overlay"></div>
+        <div class="search-container glass">
+            <div class="search-header">
+                <div class="search-input-wrapper">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" id="search-input" placeholder="Search milestones, documents, research..." autocomplete="off">
+                </div>
+                <button id="close-search" class="close-btn"><i class="fas fa-times"></i></button>
+            </div>
+            <div id="search-results" class="search-results">
+                <!-- Results will be injected here -->
+                <div class="search-placeholder">
+                    <p>Start typing to search the project index...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
@@ -575,6 +598,107 @@
                 detailsCard.style.opacity = '1';
                 detailsCard.style.transform = 'translateY(0)';
             }, 300);
+        });
+
+        // Search Functionality
+        const searchBtn = document.getElementById('search-btn');
+        const searchModal = document.getElementById('search-modal');
+        const closeSearch = document.getElementById('close-search');
+        const searchInput = document.getElementById('search-input');
+        const searchResults = document.getElementById('search-results');
+
+        const siteIndex = [
+            { title: "Home", category: "Navigation", link: "#" },
+            { title: "Domain & Research", category: "Research", link: "#features" },
+            { title: "Literature Survey", category: "Research", link: "#features" },
+            { title: "Research Problem", category: "Research", link: "#features" },
+            { title: "Technologies Used", category: "Research", link: "#features" },
+            { title: "Growth Monitoring", category: "Individual Research", link: "#features" },
+            { title: "Breed Detection", category: "Individual Research", link: "#features" },
+            { title: "Skin Disease Detection", category: "Individual Research", link: "#features" },
+            { title: "Milestones", category: "Project", link: "#how-it-works" },
+            { title: "Project Proposal", category: "Milestone", link: "#how-it-works", action: () => { dropdown.value = "proposal"; dropdown.dispatchEvent(new Event('change')); } },
+            { title: "Progress Presentation 1", category: "Milestone", link: "#how-it-works", action: () => { dropdown.value = "progress1"; dropdown.dispatchEvent(new Event('change')); } },
+            { title: "Progress Presentation 2", category: "Milestone", link: "#how-it-works", action: () => { dropdown.value = "progress2"; dropdown.dispatchEvent(new Event('change')); } },
+            { title: "Demonstration", category: "Milestone", link: "#how-it-works", action: () => { dropdown.value = "demo"; dropdown.dispatchEvent(new Event('change')); } },
+            { title: "Final Assessment", category: "Milestone", link: "#how-it-works", action: () => { dropdown.value = "final"; dropdown.dispatchEvent(new Event('change')); } },
+            { title: "Viva", category: "Milestone", link: "#how-it-works", action: () => { dropdown.value = "viva"; dropdown.dispatchEvent(new Event('change')); } },
+            { title: "Documents", category: "Project", link: "#upload" },
+            { title: "Project Charter", category: "Document", link: "#upload" },
+            { title: "Proposal Document", category: "Document", link: "#upload" },
+            { title: "Checklist Document", category: "Document", link: "#upload" },
+            { title: "Final Document", category: "Document", link: "#upload" },
+            { title: "Presentations", category: "Project", link: "#presentations" },
+            { title: "About Us", category: "Team", link: "#about" },
+            { title: "Contact", category: "Communication", link: "#contact" }
+        ];
+
+        searchBtn.addEventListener('click', () => {
+            searchModal.classList.add('active');
+            setTimeout(() => searchInput.focus(), 100);
+            document.body.style.overflow = 'hidden';
+        });
+
+        const hideSearch = () => {
+            searchModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+            searchInput.value = '';
+            renderResults([]);
+        };
+
+        closeSearch.addEventListener('click', hideSearch);
+        searchModal.querySelector('.search-overlay').addEventListener('click', hideSearch);
+
+        searchInput.addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase();
+            if (query.length < 2) {
+                renderResults([]);
+                return;
+            }
+
+            const results = siteIndex.filter(item => 
+                item.title.toLowerCase().includes(query) || 
+                item.category.toLowerCase().includes(query)
+            );
+
+            renderResults(results);
+        });
+
+        function renderResults(results) {
+            if (results.length === 0) {
+                searchResults.innerHTML = searchInput.value.length >= 2 
+                    ? '<div class="search-placeholder"><p>No results found for "' + searchInput.value + '"</p></div>'
+                    : '<div class="search-placeholder"><p>Start typing to search the project index...</p></div>';
+                return;
+            }
+
+            searchResults.innerHTML = results.map(item => `
+                <a href="${item.link}" class="result-item" data-id="${item.title}">
+                    <div class="result-info">
+                        <span class="result-title">${item.title}</span>
+                        <span class="result-category">${item.category}</span>
+                    </div>
+                    <i class="fas fa-chevron-right"></i>
+                </a>
+            `).join('');
+
+            document.querySelectorAll('.result-item').forEach(el => {
+                el.addEventListener('click', (e) => {
+                    const title = el.getAttribute('data-id');
+                    const item = results.find(i => i.title === title);
+                    if (item && item.action) {
+                        item.action();
+                    }
+                    hideSearch();
+                });
+            });
+        }
+
+        // Close on Escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && searchModal.classList.contains('active')) {
+                hideSearch();
+            }
         });
     </script>
 </body>

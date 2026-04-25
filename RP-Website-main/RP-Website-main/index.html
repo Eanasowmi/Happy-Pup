@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI-Based Multi-Modal Dog Health Monitoring System. Analyze breed, growth, and skin health using advanced deep learning.">
+    <title>Happy Pup | Understanding Domestic Dogs Through AI</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons (Font Awesome CSS Only) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav id="navbar" class="fixed-nav">
+        <div class="container">
+            <div class="nav-content glass">
+                <!-- Logo -->
+                <a href="#" class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-dog"></i>
+                    </div>
+                    <span>Happy Pup</span>
+                </a>
+
+                <!-- Checkbox Hack for Mobile Menu -->
+                <input type="checkbox" id="nav-toggle" class="nav-toggle">
+
+                <!-- Desktop Nav -->
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#features">Domain</a></li>
+                    <li><a href="#how-it-works">Milestones</a></li>
+                    <li><a href="#upload">Documents</a></li>
+                    <li><a href="#presentations">Presentations</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+
+                <!-- Actions -->
+                <div class="nav-actions">
+                    <a href="#contact" class="btn btn-primary btn-get-started">
+                        <span>Get Started</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                    <label for="nav-toggle" class="mobile-toggle">
+                        <i class="fas fa-bars menu-icon"></i>
+                        <i class="fas fa-xmark close-icon"></i>
+                    </label>
+                </div>
+
+                <!-- Mobile Menu Dropdown -->
+                <div class="mobile-menu glass">
+                    <ul class="mobile-nav-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#features">Domain</a></li>
+                        <li><a href="#how-it-works">Milestones</a></li>
+                        <li><a href="#upload">Documents</a></li>
+                        <li><a href="#presentations">Presentations</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#contact" class="btn btn-primary">Get Started</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-bg">
+                <div class="blob blob-1"></div>
+                <div class="blob blob-2"></div>
+            </div>
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-content fade-in-left">
+                        <div class="badge">
+                            <i class="fas fa-dog"></i>
+                            <span>Advanced AI Dog Monitoring</span>
+                        </div>
+                        <h1 class="hero-title">
+                            Understanding <span class="gradient-text">Domestic Dogs</span> Through AI
+                        </h1>
+                        <p class="hero-desc">
+                            Our research project focuses on Breed Detection, Growth Monitoring, and Skin Disease Detection with Treatment Suggestions to ensure your canine companion lives a healthy, happy life.
+                        </p>
+                        <div class="hero-btns">
+                            <a href="#features" class="btn btn-primary btn-lg">
+                                Explore Research
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <a href="#how-it-works" class="btn btn-outline btn-lg">
+                                View Milestones
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hero-image fade-in-scale">
+                        <div class="image-wrapper">
+                            <img src="assets/dog-research.png" alt="AI Dog Monitoring">
+                            <div class="image-overlay"></div>
+                        </div>
+                        <!-- Floating Stat -->
+                        <div class="floating-stat">
+                            <div class="stat-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="stat-text">
+                                <p class="stat-label">Health Focus</p>
+                                <p class="stat-value">Smart Monitoring</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about py-24">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="fade-in-up">About Us</h2>
+                    <div class="divider fade-in-up"></div>
+                    <p class="section-desc fade-in-up">
+                        Our dedicated team of researchers and supervisors is committed to advancing canine care through three core pillars: Breed Detection, Growth Monitoring, and Skin Disease Detection with Treatment Suggestions.
+                    </p>
+                </div>
+
+                <div class="team-section">
+                    <!-- Supervisors -->
+                    <div class="team-grid supervisors">
+                        <!-- Supervisor 1 -->
+                        <div class="team-card fade-in-up">
+                            <div class="member-image">
+                                <img src="assets/dinith.png" alt="Mr. Dinith Primal">
+                            </div>
+                            <div class="member-info">
+                                <h3>Mr. Dinith Primal</h3>
+                                <p class="role uppercase">Supervisor</p>
+                                <div class="socials">
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#"><i class="fab fa-github"></i></a>
+                                    <a href="mailto:dinith@example.com"><i class="fas fa-envelope"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Supervisor 2 -->
+                        <div class="team-card fade-in-up">
+                            <div class="member-image">
+                                <img src="assets/indunil.png" alt="Mr. Indunil Daluwatte">
+                            </div>
+                            <div class="member-info">
+                                <h3>Mr. Indunil Daluwatte</h3>
+                                <p class="role uppercase">Co-Supervisor</p>
+                                <div class="socials">
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#"><i class="fab fa-github"></i></a>
+                                    <a href="mailto:indunil@example.com"><i class="fas fa-envelope"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Members -->
+                    <div class="team-grid members mt-16">
+                        <div class="team-card fade-in-up">
+                            <div class="member-image">
+                                <img src="assets/sowmiya.png" alt="Sowmiya.S">
+                            </div>
+                            <div class="member-info">
+                                <h3>Sowmiya.S</h3>
+                                <p class="role">Member 1 - IT22225924</p>
+                                <div class="socials">
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#"><i class="fab fa-github"></i></a>
+                                    <a href="#"><i class="fas fa-envelope"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-card fade-in-up">
+                            <div class="member-image">
+                                <img src="assets/sakithiyan.png" alt="Sakithiyan.C">
+                            </div>
+                            <div class="member-info">
+                                <h3>Sakithiyan.C</h3>
+                                <p class="role">Member 2 - IT22329042</p>
+                                <div class="socials">
+                                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#"><i class="fab fa-github"></i></a>
+                                    <a href="#"><i class="fas fa-envelope"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-card fade-in-up">
+                            <div class="member-image">
+                                <img src="assets/kavinilavan.png" alt="Kavinilavan.U">
+                            </div>
+                            <div class="member-info">
+                                <h3>Kavinilavan.U</h3>
+                                <p class="role">Member 3 - IT22124944</p>
+                                <div class="socials">
+                                    <a href="https://www.linkedin.com/in/uthayarasa-kavinilavan/"><i class="fab fa-linkedin"></i></a>
+                                    <a href="https://github.com/Kavinilavan1221?tab=repositories"><i class="fab fa-github"></i></a>
+                                    <a href="mailto:it22124944@my.sliit.lk"><i class="fas fa-envelope"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Domain Section -->
+        <section id="features" class="domain py-24 bg-alt">
+            <div class="container">
+                <div class="section-header text-center mb-16">
+                    <h2 class="fade-in-up">Domain & Research Details</h2>
+                    <div class="divider fade-in-up"></div>
+                </div>
+
+                <div class="domain-content space-y-12">
+                    <div class="domain-card fade-in-left">
+                        <div class="icon-box">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <div class="card-text">
+                            <h3>Literature Survey</h3>
+                            <p>Current research in canine health shows that Breed Detection, Growth Monitoring, and early Skin Disease Detection can increase a dog's lifespan by up to 30%. Traditional methods rely on manual vet checks which lack the real-time, continuous data needed for comprehensive health tracking.</p>
+                        </div>
+                    </div>
+                    <div class="domain-card fade-in-right">
+                        <div class="icon-box">
+                            <i class="fas fa-circle-exclamation"></i>
+                        </div>
+                        <div class="card-text">
+                            <h3>Research Problem</h3>
+                            <p>Dog owners often face challenges in identifying specific breeds, monitoring growth patterns, and detecting early signs of health issues like skin diseases. There is a significant gap between traditional veterinary knowledge and accessible, technology-driven solutions.</p>
+                        </div>
+                    </div>
+                    <div class="domain-card fade-in-left">
+                        <div class="icon-box">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <div class="card-text">
+                            <h3>Technologies Used</h3>
+                            <p>Our project utilizes deep learning models for multi-modal data analysis, including Breed Detection, Growth Monitoring, and Skin Disease Detection. We leverage AI algorithms to ensure accurate health assessments.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Individual Research -->
+                <div class="mt-24">
+                    <div class="section-header text-center mb-16">
+                        <h3 class="fade-in-up">Individual Research Components</h3>
+                        <div class="divider-small fade-in-up"></div>
+                    </div>
+                    <div class="grid-3">
+                        <div class="research-card fade-in-up">
+                            <p class="member-tag">Sowmiya.S (Member 1)</p>
+                            <h4>Growth Monitoring</h4>
+                            <p>Creating a comprehensive monitoring system to track the physical development of dogs at various life stages. By analyzing growth metrics against breed-specific benchmarks.</p>
+                        </div>
+                        <div class="research-card fade-in-up" style="animation-delay: 0.1s;">
+                            <p class="member-tag">Sakithiyan.C (Member 2)</p>
+                            <h4>Breed Detection</h4>
+                            <p>Implementing advanced deep learning models to accurately identify dog breeds from multi-modal data. Helps owners understand specific biological and behavioral needs.</p>
+                        </div>
+                        <div class="research-card fade-in-up" style="animation-delay: 0.2s;">
+                            <p class="member-tag">Kavinilavan.U (Member 3)</p>
+                            <h4>Skin Disease Detection</h4>
+                            <p>Developing an AI-driven system to identify various skin diseases in domestic dogs through image analysis. Focuses on providing immediate treatment suggestions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Milestones Section -->
+        <section id="how-it-works" class="milestones py-24">
+            <div class="container">
+                <div class="section-header text-center mb-16">
+                    <h2 class="fade-in-up">Milestones</h2>
+                    <div class="divider fade-in-up"></div>
+                </div>
+                <div class="grid-3">
+                    <div class="milestone-card fade-in-up">
+                        <div class="icon-box-small">
+                            <i class="fas fa-clipboard-list"></i>
+                        </div>
+                        <h3>Project Proposal</h3>
+                        <p>Proposal presentation and the proposal report submission.</p>
+                        <div class="marks">Marks Allocated: <span>12%</span></div>
+                    </div>
+                    <div class="milestone-card fade-in-up">
+                        <div class="icon-box-small">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h3>Progress Presentation 1</h3>
+                        <p>50% progress presentation of the research project.</p>
+                        <div class="marks">Marks Allocated: <span>15%</span></div>
+                    </div>
+                    <div class="milestone-card fade-in-up">
+                        <div class="icon-box-small">
+                            <i class="fas fa-arrow-trend-up"></i>
+                        </div>
+                        <h3>Progress Presentation 2</h3>
+                        <p>90% progress presentation of the research project.</p>
+                        <div class="marks">Marks Allocated: <span>18%</span></div>
+                    </div>
+                    <div class="milestone-card fade-in-up">
+                        <div class="icon-box-small">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <h3>Demonstration</h3>
+                        <p>Submission and presentation of the camera-ready research poster.</p>
+                        <div class="marks">Marks Allocated: <span>10%</span></div>
+                    </div>
+                    <div class="milestone-card fade-in-up">
+                        <div class="icon-box-small">
+                            <i class="fas fa-file-circle-check"></i>
+                        </div>
+                        <h3>Final Assessment</h3>
+                        <p>Submission of final reports and the final presentation of the research.</p>
+                        <div class="marks">Marks Allocated: <span>10%</span></div>
+                    </div>
+                    <div class="milestone-card fade-in-up">
+                        <div class="icon-box-small">
+                            <i class="fas fa-microphone-lines"></i>
+                        </div>
+                        <h3>Viva</h3>
+                        <p>Final viva of the research Commercialization Video with User Testing.</p>
+                        <div class="marks">Marks Allocated: <span>10%</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Documents Section -->
+        <section id="upload" class="documents py-24 bg-alt">
+            <div class="container">
+                <div class="doc-container fade-in-up">
+                    <div class="doc-header">
+                        <h2>Available Documents</h2>
+                    </div>
+                    <div class="doc-list">
+                        <div class="doc-item">
+                            <div class="doc-info">
+                                <div class="icon-mini"><i class="fas fa-file-lines"></i></div>
+                                <span>Project charter</span>
+                            </div>
+                            <i class="fas fa-download dl-icon"></i>
+                        </div>
+                        <div class="doc-item">
+                            <div class="doc-info">
+                                <div class="icon-mini"><i class="fas fa-file-lines"></i></div>
+                                <span>Proposal Document</span>
+                            </div>
+                            <i class="fas fa-download dl-icon"></i>
+                        </div>
+                        <div class="doc-item">
+                            <div class="doc-info">
+                                <div class="icon-mini"><i class="fas fa-file-lines"></i></div>
+                                <span>Checklist Document</span>
+                            </div>
+                            <i class="fas fa-download dl-icon"></i>
+                        </div>
+                        <div class="doc-item">
+                            <div class="doc-info">
+                                <div class="icon-mini"><i class="fas fa-file-lines"></i></div>
+                                <span>Final Document</span>
+                            </div>
+                            <i class="fas fa-download dl-icon"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Presentations Section -->
+        <section id="presentations" class="presentations py-24">
+            <div class="container">
+                <div class="section-header text-center mb-16">
+                    <h2 class="fade-in-up">Presentations</h2>
+                    <div class="divider fade-in-up"></div>
+                </div>
+                <div class="grid-2 items-center">
+                    <div class="doc-container fade-in-left">
+                        <div class="doc-header">
+                            <h3>Available Presentations</h3>
+                        </div>
+                        <div class="doc-list">
+                            <div class="doc-item center-text"><span>Proposal Presentation</span></div>
+                            <div class="doc-item center-text"><span>Progress Presentation 1</span></div>
+                            <div class="doc-item center-text"><span>Progress Presentation 2</span></div>
+                            <div class="doc-item center-text"><span>Final Presentation</span></div>
+                        </div>
+                    </div>
+                    <div class="presentation-image fade-in-right">
+                        <div class="image-wrapper-rounded">
+                            <img src="assets/dog-research.png" alt="Research Presentation">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact py-24">
+            <div class="container">
+                <div class="section-header text-center mb-16">
+                    <h2 class="fade-in-up">Contact Us</h2>
+                    <div class="divider fade-in-up"></div>
+                </div>
+                <div class="grid-2">
+                    <div class="map-container fade-in-left">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62860.63914867083!2d80.0003534!3d9.661498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3afe53fd7be1832d%3A0x3344183d262b9f6b!2sJaffna!5e0!3m2!1sen!2slk!4v1713856234000!5m2!1sen!2slk" 
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                    <div class="form-container fade-in-right glass">
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <label>Name</label>
+                                <input type="text" name="user_name" required placeholder="Your Name">
+                            </div>
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email" name="user_email" required placeholder="your@email.com">
+                            </div>
+                            <div class="form-group">
+                                <label>Message</label>
+                                <textarea name="message" rows="5" required placeholder="How can we help?"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h4 class="brand-title">Happy Pup</h4>
+                    <p class="brand-desc">
+                        Empowering dog owners through smart technology and AI-driven monitoring. Our research focuses on Breed Detection, Growth Monitoring, and Skin Disease Detection with Treatment Suggestions.
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#features">Domain</a></li>
+                        <li><a href="#how-it-works">Milestones</a></li>
+                        <li><a href="#upload">Documents</a></li>
+                        <li><a href="#about">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CanineAI. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

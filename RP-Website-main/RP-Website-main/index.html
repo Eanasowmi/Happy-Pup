@@ -310,57 +310,50 @@
                     <h2 class="fade-in-up">Milestones</h2>
                     <div class="divider fade-in-up"></div>
                 </div>
-                <div class="grid-3">
-                    <div class="milestone-card fade-in-up">
-                        <div class="icon-box-small">
-                            <i class="fas fa-clipboard-list"></i>
+                <div class="milestone-selector-container fade-in-up">
+                    <div class="selector-wrapper glass">
+                        <label for="milestone-dropdown" class="selector-label">Select Assessment</label>
+                        <select id="milestone-dropdown" class="milestone-dropdown">
+                            <option value="proposal">Project Proposal</option>
+                            <option value="progress1">Progress Presentation 1</option>
+                            <option value="progress2">Progress Presentation 2</option>
+                            <option value="demo">Demonstration</option>
+                            <option value="final">Final Assessment</option>
+                            <option value="viva">Viva</option>
+                        </select>
+                        <div class="dropdown-icon">
+                            <i class="fas fa-chevron-down"></i>
                         </div>
-                        <h3>Project Proposal</h3>
-                        <p><a href="https://docs.google.com/presentation/d/1T3rqkTTmLpER3ElNfKnhnQd51V15SQq9/edit?usp=sharing&ouid=107415389011281101065&rtpof=true&sd=true"
-                                target="_blank" class="inline-link">Proposal presentation</a> and the <a
-                                href="https://drive.google.com/file/d/1rSyS1DdMIWpZn3GaFPUhccqEg9byez1G/view?usp=sharing"
-                                target="_blank" class="inline-link">proposal report</a> submission.</p>
-                        <div class="marks">Marks Allocated: <span>12%</span></div>
                     </div>
-                    <div class="milestone-card fade-in-up">
-                        <div class="icon-box-small">
-                            <i class="fas fa-chart-bar"></i>
+
+                    <div id="milestone-details" class="milestone-details-card glass fade-in-up">
+                        <div class="milestone-header">
+                            <div class="milestone-title-area">
+                                <div class="milestone-icon" id="detail-icon">
+                                    <i class="fas fa-clipboard-list"></i>
+                                </div>
+                                <h3 id="detail-title">Project Proposal</h3>
+                            </div>
+                            <div class="milestone-meta">
+                                <div class="meta-item">
+                                    <i class="fas fa-calendar-alt"></i>
+                                    <span id="detail-date">March 2025</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="fas fa-star"></i>
+                                    <span id="detail-marks">Marks: 12%</span>
+                                </div>
+                            </div>
                         </div>
-                        <h3>Progress Presentation 1</h3>
-                        <p>50% progress presentation of the research project.</p>
-                        <div class="marks">Marks Allocated: <span>15%</span></div>
-                    </div>
-                    <div class="milestone-card fade-in-up">
-                        <div class="icon-box-small">
-                            <i class="fas fa-arrow-trend-up"></i>
+                        <div class="divider-small"></div>
+                        <div class="milestone-body">
+                            <p id="detail-desc">
+                                <a href="https://docs.google.com/presentation/d/1T3rqkTTmLpER3ElNfKnhnQd51V15SQq9/edit?usp=sharing&ouid=107415389011281101065&rtpof=true&sd=true"
+                                    target="_blank" class="inline-link">Proposal presentation</a> and the <a
+                                    href="https://drive.google.com/file/d/1rSyS1DdMIWpZn3GaFPUhccqEg9byez1G/view?usp=sharing"
+                                    target="_blank" class="inline-link">proposal report</a> submission.
+                            </p>
                         </div>
-                        <h3>Progress Presentation 2</h3>
-                        <p>90% progress presentation of the research project.</p>
-                        <div class="marks">Marks Allocated: <span>18%</span></div>
-                    </div>
-                    <div class="milestone-card fade-in-up">
-                        <div class="icon-box-small">
-                            <i class="fas fa-desktop"></i>
-                        </div>
-                        <h3>Demonstration</h3>
-                        <p>Submission and presentation of the camera-ready research poster.</p>
-                        <div class="marks">Marks Allocated: <span>10%</span></div>
-                    </div>
-                    <div class="milestone-card fade-in-up">
-                        <div class="icon-box-small">
-                            <i class="fas fa-file-circle-check"></i>
-                        </div>
-                        <h3>Final Assessment</h3>
-                        <p>Submission of final reports and the final presentation of the research.</p>
-                        <div class="marks">Marks Allocated: <span>10%</span></div>
-                    </div>
-                    <div class="milestone-card fade-in-up">
-                        <div class="icon-box-small">
-                            <i class="fas fa-microphone-lines"></i>
-                        </div>
-                        <h3>Viva</h3>
-                        <p>Final viva of the research Commercialization Video with User Testing.</p>
-                        <div class="marks">Marks Allocated: <span>10%</span></div>
                     </div>
                 </div>
             </div>
@@ -424,7 +417,8 @@
                             <a href="https://docs.google.com/presentation/d/1T3rqkTTmLpER3ElNfKnhnQd51V15SQq9/edit?usp=sharing&ouid=107415389011281101065&rtpof=true&sd=true"
                                 target="_blank" class="doc-item center-text"><span>Proposal Presentation</span></a>
                             <div class="doc-item center-text"><span>Progress Presentation 1</span></div>
-                            <div class="doc-item center-text"><span>Progress Presentation 2</span></div>
+                            <a href="https://docs.google.com/presentation/d/1gJmaB6hTLayoC04w9JR-4hpDe30i1bGP/edit?usp=sharing&ouid=105052346453553604603&rtpof=true&sd=true"
+                                target="_blank" class="doc-item center-text"><span>Progress Presentation 2</span></a>
                             <div class="doc-item center-text"><span>Final Presentation</span></div>
                         </div>
                     </div>
@@ -510,6 +504,79 @@
             </div>
         </div>
     </footer>
+    <script>
+        const milestoneData = {
+            proposal: {
+                title: "Project Proposal",
+                date: "March 2025",
+                marks: "Marks: 12%",
+                icon: "fa-clipboard-list",
+                desc: '<a href="https://docs.google.com/presentation/d/1T3rqkTTmLpER3ElNfKnhnQd51V15SQq9/edit?usp=sharing&ouid=107415389011281101065&rtpof=true&sd=true" target="_blank" class="inline-link">Proposal presentation</a> and the <a href="https://drive.google.com/file/d/1rSyS1DdMIWpZn3GaFPUhccqEg9byez1G/view?usp=sharing" target="_blank" class="inline-link">proposal report</a> submission.'
+            },
+            progress1: {
+                title: "Progress Presentation 1",
+                date: "May 2025",
+                marks: "Marks: 15%",
+                icon: "fa-chart-bar",
+                desc: "50% progress presentation of the research project."
+            },
+            progress2: {
+                title: "Progress Presentation 2",
+                date: "July 2025",
+                marks: "Marks: 18%",
+                icon: "fa-arrow-trend-up",
+                desc: '<a href="https://docs.google.com/presentation/d/1gJmaB6hTLayoC04w9JR-4hpDe30i1bGP/edit?usp=sharing&ouid=105052346453553604603&rtpof=true&sd=true" target="_blank" class="inline-link">Progress presentation 2</a> (90% progress) of the research project.'
+            },
+            demo: {
+                title: "Demonstration",
+                date: "August 2025",
+                marks: "Marks: 10%",
+                icon: "fa-desktop",
+                desc: "Submission and presentation of the camera-ready research poster."
+            },
+            final: {
+                title: "Final Assessment",
+                date: "September 2025",
+                marks: "Marks: 10%",
+                icon: "fa-file-circle-check",
+                desc: "Submission of final reports and the final presentation of the research."
+            },
+            viva: {
+                title: "Viva",
+                date: "October 2025",
+                marks: "Marks: 10%",
+                icon: "fa-microphone-lines",
+                desc: "Final viva of the research Commercialization Video with User Testing."
+            }
+        };
+
+        const dropdown = document.getElementById('milestone-dropdown');
+        const detailsCard = document.getElementById('milestone-details');
+        const detailTitle = document.getElementById('detail-title');
+        const detailDate = document.getElementById('detail-date');
+        const detailMarks = document.getElementById('detail-marks');
+        const detailDesc = document.getElementById('detail-desc');
+        const detailIcon = document.getElementById('detail-icon');
+
+        dropdown.addEventListener('change', (e) => {
+            const data = milestoneData[e.target.value];
+
+            // Add a small fade effect
+            detailsCard.style.opacity = '0';
+            detailsCard.style.transform = 'translateY(10px)';
+
+            setTimeout(() => {
+                detailTitle.textContent = data.title;
+                detailDate.textContent = data.date;
+                detailMarks.textContent = data.marks;
+                detailDesc.innerHTML = data.desc;
+                detailIcon.innerHTML = `<i class="fas ${data.icon}"></i>`;
+
+                detailsCard.style.opacity = '1';
+                detailsCard.style.transform = 'translateY(0)';
+            }, 300);
+        });
+    </script>
 </body>
 
 </html>

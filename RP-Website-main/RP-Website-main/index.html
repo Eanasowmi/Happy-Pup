@@ -49,9 +49,6 @@
 
                 <!-- Actions -->
                 <div class="nav-actions">
-                    <button id="search-btn" class="search-trigger" aria-label="Search">
-                        <i class="fas fa-search"></i>
-                    </button>
                     <a href="#contact" class="btn btn-primary btn-get-started">
                         <span>Get Started</span>
                         <i class="fas fa-chevron-right"></i>
@@ -313,49 +310,176 @@
                     <h2 class="fade-in-up">Milestones</h2>
                     <div class="divider fade-in-up"></div>
                 </div>
-                <div class="milestone-selector-container fade-in-up">
-                    <div class="selector-wrapper glass">
-                        <label for="milestone-dropdown" class="selector-label">Select Assessment</label>
-                        <select id="milestone-dropdown" class="milestone-dropdown">
-                            <option value="proposal">Project Proposal</option>
-                            <option value="progress1">Progress Presentation 1</option>
-                            <option value="progress2">Progress Presentation 2</option>
-                            <option value="demo">Demonstration</option>
-                            <option value="final">Final Assessment</option>
-                            <option value="viva">Viva</option>
-                        </select>
-                        <div class="dropdown-icon">
-                            <i class="fas fa-chevron-down"></i>
+                <div class="milestone-dropdown-container fade-in-up">
+                    <!-- Hidden Radio Buttons for State -->
+                    <input type="radio" name="milestone-tab" id="tab-proposal" class="milestone-radio" checked>
+                    <input type="radio" name="milestone-tab" id="tab-progress1" class="milestone-radio">
+                    <input type="radio" name="milestone-tab" id="tab-progress2" class="milestone-radio">
+                    <input type="radio" name="milestone-tab" id="tab-final-presentation" class="milestone-radio">
+                    <input type="radio" name="milestone-tab" id="tab-demo" class="milestone-radio">
+                    <input type="radio" name="milestone-tab" id="tab-final" class="milestone-radio">
+                    <input type="radio" name="milestone-tab" id="tab-viva" class="milestone-radio">
+
+                    <!-- Dropdown Toggle (Checkbox Hack) -->
+                    <input type="checkbox" id="milestone-toggle" class="dropdown-toggle">
+
+                    <div class="milestone-selector glass">
+                        <label for="milestone-toggle" class="selector-header">
+                            <span class="selected-text proposal-text">Project Proposal</span>
+                            <span class="selected-text progress1-text">Progress Presentation 1</span>
+                            <span class="selected-text progress2-text">Progress Presentation 2</span>
+                            <span class="selected-text final-presentation-text">Final Presentation</span>
+                            <span class="selected-text demo-text">Demonstration</span>
+                            <span class="selected-text final-text">Final Assessment</span>
+                            <span class="selected-text viva-text">Viva</span>
+                            <i class="fas fa-chevron-down dropdown-arrow"></i>
+                        </label>
+
+                        <div class="milestone-options glass">
+                            <label for="tab-proposal" class="option-label">Project Proposal</label>
+                            <label for="tab-progress1" class="option-label">Progress Presentation 1</label>
+                            <label for="tab-progress2" class="option-label">Progress Presentation 2</label>
+                            <label for="tab-final-presentation" class="option-label">Final Presentation</label>
+                            <label for="tab-demo" class="option-label">Demonstration</label>
+                            <label for="tab-final" class="option-label">Final Assessment</label>
+                            <label for="tab-viva" class="option-label">Viva</label>
                         </div>
                     </div>
 
-                    <div id="milestone-details" class="milestone-details-card glass fade-in-up">
-                        <div class="milestone-header">
-                            <div class="milestone-title-area">
-                                <div class="milestone-icon" id="detail-icon">
-                                    <i class="fas fa-clipboard-list"></i>
+                    <!-- Milestone Details Cards -->
+                    <div class="milestone-contents">
+                        <!-- Project Proposal -->
+                        <div class="milestone-details-card glass content-proposal">
+                            <div class="milestone-header">
+                                <div class="milestone-title-area">
+                                    <div class="milestone-icon"><i class="fas fa-clipboard-list"></i></div>
+                                    <h3>Project Proposal</h3>
                                 </div>
-                                <h3 id="detail-title">Project Proposal</h3>
+                                <div class="milestone-meta">
+                                    <div class="meta-item"><i class="fas fa-calendar-alt"></i><span>September 2025</span></div>
+                                    <div class="meta-item"><i class="fas fa-star"></i><span>Marks: 12%</span></div>
+                                </div>
                             </div>
-                            <div class="milestone-meta">
-                                <div class="meta-item">
-                                    <i class="fas fa-calendar-alt"></i>
-                                    <span id="detail-date">March 2025</span>
-                                </div>
-                                <div class="meta-item">
-                                    <i class="fas fa-star"></i>
-                                    <span id="detail-marks">Marks: 12%</span>
-                                </div>
+                            <div class="divider-small"></div>
+                            <div class="milestone-body">
+                                <p>
+                                    <a href="https://docs.google.com/presentation/d/1T3rqkTTmLpER3ElNfKnhnQd51V15SQq9/edit?usp=sharing&ouid=107415389011281101065&rtpof=true&sd=true"
+                                        target="_blank" class="inline-link">Proposal presentation</a> and the <a
+                                        href="https://drive.google.com/file/d/1rSyS1DdMIWpZn3GaFPUhccqEg9byez1G/view?usp=sharing"
+                                        target="_blank" class="inline-link">proposal report</a> submission.
+                                </p>
                             </div>
                         </div>
-                        <div class="divider-small"></div>
-                        <div class="milestone-body">
-                            <p id="detail-desc">
-                                <a href="https://docs.google.com/presentation/d/1T3rqkTTmLpER3ElNfKnhnQd51V15SQq9/edit?usp=sharing&ouid=107415389011281101065&rtpof=true&sd=true"
-                                    target="_blank" class="inline-link">Proposal presentation</a> and the <a
-                                    href="https://drive.google.com/file/d/1rSyS1DdMIWpZn3GaFPUhccqEg9byez1G/view?usp=sharing"
-                                    target="_blank" class="inline-link">proposal report</a> submission.
-                            </p>
+
+                        <!-- Progress Presentation 1 -->
+                        <div class="milestone-details-card glass content-progress1">
+                            <div class="milestone-header">
+                                <div class="milestone-title-area">
+                                    <div class="milestone-icon"><i class="fas fa-chart-bar"></i></div>
+                                    <h3>Progress Presentation 1</h3>
+                                </div>
+                                <div class="milestone-meta">
+                                    <div class="meta-item"><i class="fas fa-calendar-alt"></i><span>January 2026</span></div>
+                                    <div class="meta-item"><i class="fas fa-star"></i><span>Marks: 15%</span></div>
+                                </div>
+                            </div>
+                            <div class="divider-small"></div>
+                            <div class="milestone-body">
+                                <p>50% progress presentation of the research project.</p>
+                            </div>
+                        </div>
+
+                        <!-- Progress Presentation 2 -->
+                        <div class="milestone-details-card glass content-progress2">
+                            <div class="milestone-header">
+                                <div class="milestone-title-area">
+                                    <div class="milestone-icon"><i class="fas fa-arrow-trend-up"></i></div>
+                                    <h3>Progress Presentation 2</h3>
+                                </div>
+                                <div class="milestone-meta">
+                                    <div class="meta-item"><i class="fas fa-calendar-alt"></i><span>March 2026</span></div>
+                                    <div class="meta-item"><i class="fas fa-star"></i><span>Marks: 18%</span></div>
+                                </div>
+                            </div>
+                            <div class="divider-small"></div>
+                            <div class="milestone-body">
+                                <p>
+                                    <a href="https://docs.google.com/presentation/d/1gJmaB6hTLayoC04w9JR-4hpDe30i1bGP/edit?usp=sharing&ouid=105052346453553604603&rtpof=true&sd=true"
+                                        target="_blank" class="inline-link">Progress presentation 2</a> (90% progress) of the research project.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Final Presentation -->
+                        <div class="milestone-details-card glass content-final-presentation">
+                            <div class="milestone-header">
+                                <div class="milestone-title-area">
+                                    <div class="milestone-icon"><i class="fas fa-display"></i></div>
+                                    <h3>Final Presentation</h3>
+                                </div>
+                                <div class="milestone-meta">
+                                    <div class="meta-item"><i class="fas fa-calendar-alt"></i><span>May 2026</span></div>
+                                    <div class="meta-item"><i class="fas fa-star"></i><span>Marks: 10%</span></div>
+                                </div>
+                            </div>
+                            <div class="divider-small"></div>
+                            <div class="milestone-body">
+                                <p>Final presentation of the research project, showcasing completed work and outcomes.</p>
+                            </div>
+                        </div>
+
+                        <!-- Demonstration -->
+                        <div class="milestone-details-card glass content-demo">
+                            <div class="milestone-header">
+                                <div class="milestone-title-area">
+                                    <div class="milestone-icon"><i class="fas fa-desktop"></i></div>
+                                    <h3>Demonstration</h3>
+                                </div>
+                                <div class="milestone-meta">
+                                    <div class="meta-item"><i class="fas fa-calendar-alt"></i><span>August 2025</span></div>
+                                    <div class="meta-item"><i class="fas fa-star"></i><span>Marks: 10%</span></div>
+                                </div>
+                            </div>
+                            <div class="divider-small"></div>
+                            <div class="milestone-body">
+                                <p>Submission and presentation of the camera-ready research poster.</p>
+                            </div>
+                        </div>
+
+                        <!-- Final Assessment -->
+                        <div class="milestone-details-card glass content-final">
+                            <div class="milestone-header">
+                                <div class="milestone-title-area">
+                                    <div class="milestone-icon"><i class="fas fa-file-circle-check"></i></div>
+                                    <h3>Final Assessment</h3>
+                                </div>
+                                <div class="milestone-meta">
+                                    <div class="meta-item"><i class="fas fa-calendar-alt"></i><span>September 2025</span></div>
+                                    <div class="meta-item"><i class="fas fa-star"></i><span>Marks: 10%</span></div>
+                                </div>
+                            </div>
+                            <div class="divider-small"></div>
+                            <div class="milestone-body">
+                                <p>Submission of final reports and the final presentation of the research.</p>
+                            </div>
+                        </div>
+
+                        <!-- Viva -->
+                        <div class="milestone-details-card glass content-viva">
+                            <div class="milestone-header">
+                                <div class="milestone-title-area">
+                                    <div class="milestone-icon"><i class="fas fa-microphone-lines"></i></div>
+                                    <h3>Viva</h3>
+                                </div>
+                                <div class="milestone-meta">
+                                    <div class="meta-item"><i class="fas fa-calendar-alt"></i><span>October 2025</span></div>
+                                    <div class="meta-item"><i class="fas fa-star"></i><span>Marks: 10%</span></div>
+                                </div>
+                            </div>
+                            <div class="divider-small"></div>
+                            <div class="milestone-body">
+                                <p>Final viva of the research Commercialization Video with User Testing.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -471,26 +595,6 @@
         </section>
     </main>
 
-    <!-- Search Modal -->
-    <div id="search-modal" class="search-modal">
-        <div class="search-overlay"></div>
-        <div class="search-container glass">
-            <div class="search-header">
-                <div class="search-input-wrapper">
-                    <i class="fas fa-search search-icon"></i>
-                    <input type="text" id="search-input" placeholder="Search milestones, documents, research..." autocomplete="off">
-                </div>
-                <button id="close-search" class="close-btn"><i class="fas fa-times"></i></button>
-            </div>
-            <div id="search-results" class="search-results">
-                <!-- Results will be injected here -->
-                <div class="search-placeholder">
-                    <p>Start typing to search the project index...</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
@@ -527,180 +631,6 @@
             </div>
         </div>
     </footer>
-    <script>
-        const milestoneData = {
-            proposal: {
-                title: "Project Proposal",
-                date: "March 2025",
-                marks: "Marks: 12%",
-                icon: "fa-clipboard-list",
-                desc: '<a href="https://docs.google.com/presentation/d/1T3rqkTTmLpER3ElNfKnhnQd51V15SQq9/edit?usp=sharing&ouid=107415389011281101065&rtpof=true&sd=true" target="_blank" class="inline-link">Proposal presentation</a> and the <a href="https://drive.google.com/file/d/1rSyS1DdMIWpZn3GaFPUhccqEg9byez1G/view?usp=sharing" target="_blank" class="inline-link">proposal report</a> submission.'
-            },
-            progress1: {
-                title: "Progress Presentation 1",
-                date: "May 2025",
-                marks: "Marks: 15%",
-                icon: "fa-chart-bar",
-                desc: "50% progress presentation of the research project."
-            },
-            progress2: {
-                title: "Progress Presentation 2",
-                date: "July 2025",
-                marks: "Marks: 18%",
-                icon: "fa-arrow-trend-up",
-                desc: '<a href="https://docs.google.com/presentation/d/1gJmaB6hTLayoC04w9JR-4hpDe30i1bGP/edit?usp=sharing&ouid=105052346453553604603&rtpof=true&sd=true" target="_blank" class="inline-link">Progress presentation 2</a> (90% progress) of the research project.'
-            },
-            demo: {
-                title: "Demonstration",
-                date: "August 2025",
-                marks: "Marks: 10%",
-                icon: "fa-desktop",
-                desc: "Submission and presentation of the camera-ready research poster."
-            },
-            final: {
-                title: "Final Assessment",
-                date: "September 2025",
-                marks: "Marks: 10%",
-                icon: "fa-file-circle-check",
-                desc: "Submission of final reports and the final presentation of the research."
-            },
-            viva: {
-                title: "Viva",
-                date: "October 2025",
-                marks: "Marks: 10%",
-                icon: "fa-microphone-lines",
-                desc: "Final viva of the research Commercialization Video with User Testing."
-            }
-        };
-
-        const dropdown = document.getElementById('milestone-dropdown');
-        const detailsCard = document.getElementById('milestone-details');
-        const detailTitle = document.getElementById('detail-title');
-        const detailDate = document.getElementById('detail-date');
-        const detailMarks = document.getElementById('detail-marks');
-        const detailDesc = document.getElementById('detail-desc');
-        const detailIcon = document.getElementById('detail-icon');
-
-        dropdown.addEventListener('change', (e) => {
-            const data = milestoneData[e.target.value];
-
-            // Add a small fade effect
-            detailsCard.style.opacity = '0';
-            detailsCard.style.transform = 'translateY(10px)';
-
-            setTimeout(() => {
-                detailTitle.textContent = data.title;
-                detailDate.textContent = data.date;
-                detailMarks.textContent = data.marks;
-                detailDesc.innerHTML = data.desc;
-                detailIcon.innerHTML = `<i class="fas ${data.icon}"></i>`;
-
-                detailsCard.style.opacity = '1';
-                detailsCard.style.transform = 'translateY(0)';
-            }, 300);
-        });
-
-        // Search Functionality
-        const searchBtn = document.getElementById('search-btn');
-        const searchModal = document.getElementById('search-modal');
-        const closeSearch = document.getElementById('close-search');
-        const searchInput = document.getElementById('search-input');
-        const searchResults = document.getElementById('search-results');
-
-        const siteIndex = [
-            { title: "Home", category: "Navigation", link: "#" },
-            { title: "Domain & Research", category: "Research", link: "#features" },
-            { title: "Literature Survey", category: "Research", link: "#features" },
-            { title: "Research Problem", category: "Research", link: "#features" },
-            { title: "Technologies Used", category: "Research", link: "#features" },
-            { title: "Growth Monitoring", category: "Individual Research", link: "#features" },
-            { title: "Breed Detection", category: "Individual Research", link: "#features" },
-            { title: "Skin Disease Detection", category: "Individual Research", link: "#features" },
-            { title: "Milestones", category: "Project", link: "#how-it-works" },
-            { title: "Project Proposal", category: "Milestone", link: "#how-it-works", action: () => { dropdown.value = "proposal"; dropdown.dispatchEvent(new Event('change')); } },
-            { title: "Progress Presentation 1", category: "Milestone", link: "#how-it-works", action: () => { dropdown.value = "progress1"; dropdown.dispatchEvent(new Event('change')); } },
-            { title: "Progress Presentation 2", category: "Milestone", link: "#how-it-works", action: () => { dropdown.value = "progress2"; dropdown.dispatchEvent(new Event('change')); } },
-            { title: "Demonstration", category: "Milestone", link: "#how-it-works", action: () => { dropdown.value = "demo"; dropdown.dispatchEvent(new Event('change')); } },
-            { title: "Final Assessment", category: "Milestone", link: "#how-it-works", action: () => { dropdown.value = "final"; dropdown.dispatchEvent(new Event('change')); } },
-            { title: "Viva", category: "Milestone", link: "#how-it-works", action: () => { dropdown.value = "viva"; dropdown.dispatchEvent(new Event('change')); } },
-            { title: "Documents", category: "Project", link: "#upload" },
-            { title: "Project Charter", category: "Document", link: "#upload" },
-            { title: "Proposal Document", category: "Document", link: "#upload" },
-            { title: "Checklist Document", category: "Document", link: "#upload" },
-            { title: "Final Document", category: "Document", link: "#upload" },
-            { title: "Presentations", category: "Project", link: "#presentations" },
-            { title: "About Us", category: "Team", link: "#about" },
-            { title: "Contact", category: "Communication", link: "#contact" }
-        ];
-
-        searchBtn.addEventListener('click', () => {
-            searchModal.classList.add('active');
-            setTimeout(() => searchInput.focus(), 100);
-            document.body.style.overflow = 'hidden';
-        });
-
-        const hideSearch = () => {
-            searchModal.classList.remove('active');
-            document.body.style.overflow = 'auto';
-            searchInput.value = '';
-            renderResults([]);
-        };
-
-        closeSearch.addEventListener('click', hideSearch);
-        searchModal.querySelector('.search-overlay').addEventListener('click', hideSearch);
-
-        searchInput.addEventListener('input', (e) => {
-            const query = e.target.value.toLowerCase();
-            if (query.length < 2) {
-                renderResults([]);
-                return;
-            }
-
-            const results = siteIndex.filter(item => 
-                item.title.toLowerCase().includes(query) || 
-                item.category.toLowerCase().includes(query)
-            );
-
-            renderResults(results);
-        });
-
-        function renderResults(results) {
-            if (results.length === 0) {
-                searchResults.innerHTML = searchInput.value.length >= 2 
-                    ? '<div class="search-placeholder"><p>No results found for "' + searchInput.value + '"</p></div>'
-                    : '<div class="search-placeholder"><p>Start typing to search the project index...</p></div>';
-                return;
-            }
-
-            searchResults.innerHTML = results.map(item => `
-                <a href="${item.link}" class="result-item" data-id="${item.title}">
-                    <div class="result-info">
-                        <span class="result-title">${item.title}</span>
-                        <span class="result-category">${item.category}</span>
-                    </div>
-                    <i class="fas fa-chevron-right"></i>
-                </a>
-            `).join('');
-
-            document.querySelectorAll('.result-item').forEach(el => {
-                el.addEventListener('click', (e) => {
-                    const title = el.getAttribute('data-id');
-                    const item = results.find(i => i.title === title);
-                    if (item && item.action) {
-                        item.action();
-                    }
-                    hideSearch();
-                });
-            });
-        }
-
-        // Close on Escape
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && searchModal.classList.contains('active')) {
-                hideSearch();
-            }
-        });
-    </script>
 </body>
 
 </html>
